@@ -1,6 +1,6 @@
 {
   "name": "bluebird-delay",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "This library provides a method for creating cancelable and unreferencable delays with Bluebird promises",
   "main": "lib",
   "repository": {

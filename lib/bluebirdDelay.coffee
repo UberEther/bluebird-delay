@@ -6,9 +6,9 @@ bluebirdDelay = (delay, opts = {}) ->
 
     promise = new Promise (res) -> resolve = res
     .cancellable()
-    .catch Promise.CancellationError, (err) ->
+    .catch (err) ->
         # Check name as if we have multiple bluebirds loaded, the error class may not be an exact match
-        clearTimeout timeout
+        clearTimeout timeout if err.name == "CancellationError"
         throw err
 
     onTimeout = () ->
