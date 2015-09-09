@@ -19,8 +19,23 @@ describe "Shutdown Handler", () ->
         expect(p.isCancellable()).to.equal(true)
         p.cancel()
 
+    it "should cancel while waiting on timeout (with external exception)", (cb) ->
+        ex = new Error
+        ex.name = "CancellationError"
+
+        start = Date.now()
+        p = bluebirdDelay(100000)
+        .catch (err) ->
+            throw err if err != ex
+            cb()
+                       
+        expect(p.isCancellable()).to.equal(true)
+        p.cancel(ex)
+
+
     it "should be unreferencable", (cb) ->
         start = Date.now()
         bluebirdDelay(10, { unref: true })
         .then () -> cb()
         # @todo Any ideas on a good way to verify this worked?
+
