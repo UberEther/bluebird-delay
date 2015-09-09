@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/UberEther/bluebird-delay.svg?branch=master)](https://travis-ci.org/UberEther/bluebird-delay)
+[![bUild Status](https://travis-ci.org/UberEther/bluebird-delay.svg?branch=master)](https://travis-ci.org/UberEther/bluebird-delay)
 [![NPM Status](https://badge.fury.io/js/bluebird-delay.svg)](http://badge.fury.io/js/bluebird-delay)
 
 # Overview
@@ -35,3 +35,4 @@ Options:
 # Contributing
 
 Any PRs are welcome but please stick to following the general style of the code and stick to [CoffeeScript](http://coffeescript.org/).  I know the opinions on CoffeeScript are...highly varied...I will not go into this debate here - this project is currently written in CoffeeScript and I ask you maintain that for any PRs.
+
